@@ -10,10 +10,9 @@
 
 ระบบจัดการร้านอาหาร (RMS) สำหรับจัดการเมนู รับออเดอร์ ชำระเงิน และดูรายงานยอดขาย
 
-**นักศึกษา:** _กรอกชื่อ-สกุล_
-**รหัสนักศึกษา:** _กรอกรหัส_
-**วันที่สอบ:** _วันที่_
-
+**นักศึกษา:** ธีธัช คัคคัมพร
+**รหัสนักศึกษา:** 68030125
+**วันที่สอบ:** 31/10/69
 ---
 
 ## 🛠️ Tech Stack
@@ -90,15 +89,16 @@
 
 ### Vitest Results
 ```
-Run: npm test
-✓ Payment returns positive change when overpaid
-✗ [BUG-001] Should NOT allow negative change  ← reveals bug!
+Test Files  1 failed | 1 passed (2)
+Tests       1 failed | 19 passed (20)
+Fail Detail: [BUG-001] Payment Calculation Logic > should NOT produce negative change
+             AssertionError: expected -50 to be greater than or equal to 0
 ...
 ```
 
 ### Newman Pass Rate
 ```
-Total: 21  |  Passed: __  |  Failed: __  |  Pass Rate: __%
+Total: 21  |  Passed: 19  |  Failed: 1  |  Pass Rate: 95%
 ```
 
 ### Test Case Table
@@ -185,8 +185,7 @@ npm install && npm run dev
 ### Vercel Deployment (Frontend)
 1. Import repo → Root Directory: `frontend`
 2. Framework: Vite
-3. Env: `VITE_API_URL=https://your-backend.onrender.com/api`
-
+3. Env: `**Frontend (Vercel):** https://<YOUR_VERCEL_URL>.vercel.app
 ### Render Deployment (Backend + Database)
 1. สร้าง PostgreSQL database บน Render (ตามขั้นตอนด้านบน)
 2. New Web Service → Connect GitHub repo → เลือก branch
@@ -235,3 +234,8 @@ npm install && npm run dev
 | Admin | admin | Admin@123 |
 | Cashier | cashier1 | Cashier@123 |
 | Waiter | waiter1 | Waiter@123 |
+
+
+## Production Deployment URLs
+- **Frontend (Vercel):** https://<YOUR_VERCEL_URL>.vercel.app
+- **Backend (Render):** https://restaurant-management-system-68030125.onrender.com
